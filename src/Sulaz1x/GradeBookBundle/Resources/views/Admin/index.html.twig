@@ -1,0 +1,28 @@
+{# src/OC/UserBundle/Resources/views/Security/login.html.twig #}
+
+
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+    <div class="jumbotron">
+        <h1>Hello ! Bienvenu sur le site des crapules ! </h1>
+        <p> Si tu accède à cette page c'est que tu es bien connecté ! Félicitation</p>
+        <ul>
+            {% for classe in classes %}
+                <li>
+                    {{classe.Name}} : {{classe.Description}}
+                    <br>
+                    {% for room in classe.classes%}
+                        {{room.name}} {{room.Description}}
+                        {% for student in room.students %}
+                            {{student.username}}
+                        {% endfor %}
+                    {% endfor %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}
+{# src/OC/UserBundle/Resources/views/Security/login.html.twig #}

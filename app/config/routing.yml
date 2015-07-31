@@ -1,0 +1,13 @@
+sulaz1x_grade_book:
+    resource: "@Sulaz1xGradeBookBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+sulaz1x_security:
+    resource:   "@Sulaz1xSecurityBundle/Controller/"
+    type:       annotation
+    prefix:     /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
