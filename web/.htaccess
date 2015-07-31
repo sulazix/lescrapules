@@ -18,6 +18,11 @@ DirectoryIndex app.php
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
+     # pour avoir du php5 sur 1and1
+
+    AddType x-mapp-php5 .php
+
+    AddHandler x-mapp-php5 .php
 
     # Determine the RewriteBase automatically and set it as environment variable.
     # If you are using Apache aliases to do mass virtual hosting or installed the
@@ -65,3 +70,5 @@ DirectoryIndex app.php
         # RedirectTemp cannot be used instead
     </IfModule>
 </IfModule>
+Options +FollowSymLinks
+RewriteBase /
